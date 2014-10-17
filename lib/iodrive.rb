@@ -11,7 +11,7 @@ def get_fio_status
     iodrive[:installed] = true
     status, stdout, stderr = run_command(:no_status_check => false, :command => "fio-status -fj")
     fio_status = JSON.parse(stdout, :symbolize_names => true)
-    iodrive fio_status if fio_status[:version]
+    iodrive.update fio_status if fio_status[:version]
   else
     iodrive[:installed] = false
   end

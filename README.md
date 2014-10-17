@@ -14,6 +14,7 @@ $ ohai -d /path/to/plugin_dir | jq .iodrive
 
 ```json
 {
+  "installed": true,
   "adapter": [
     {
       "board_kind": "Single Controller Adapter",
